@@ -1,9 +1,10 @@
 <template>
     <table class="base-table">
         <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
+            <th>Municipio</th>
+            <th>Centro</th>
+            <th>Indicador</th>
+            <th>NER</th>
         </tr>
         <tr>
             <td>Alfreds Futterkiste</td>
