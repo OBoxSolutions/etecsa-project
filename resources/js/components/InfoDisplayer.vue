@@ -36,7 +36,12 @@ export default {
     components: {
         LeafletMap
     },
-    name: "InfoDisplayer"
+    name: "InfoDisplayer",
+    methods: {
+        activate(toActivate) {
+            this.active = toActivate;
+        }
+    }
 };
 </script>
 
