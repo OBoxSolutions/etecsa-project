@@ -29,4 +29,4 @@ const app = new Vue({
     el: "#app"
 });
 
-module.exports = app;
+export default app;
