@@ -1,7 +1,7 @@
 const mymap = L.map("map").setView([51.505, -0.09], 13);
 
 const greenIcon = L.icon({
-    iconUrl: "map-marker.svg",
+    iconUrl: "images/map-marker.svg",
 
     iconSize: [38, 95], // size of the icon
     shadowSize: [50, 64], // size of the shadow
@@ -11,7 +11,7 @@ const greenIcon = L.icon({
 });
 
 const redIcon = L.icon({
-    iconUrl: "map-marker-alert.svg",
+    iconUrl: "images/map-marker-alert.svg",
 
     iconSize: [48, 105], // size of the icon
     shadowSize: [50, 64], // size of the shadow
