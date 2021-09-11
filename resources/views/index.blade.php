@@ -23,7 +23,9 @@
 </head>
 
 <body class="antialiased">
-    <div class="map" id="map"></div>
+    <div id="app">
+        <leaflet-map></leaflet-map>
+    </div>
 </body>
 
 </html>
