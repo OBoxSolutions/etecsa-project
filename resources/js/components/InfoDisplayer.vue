@@ -43,6 +43,11 @@ export default {
     methods: {
         activate(toActivate) {
             this.active = toActivate;
+        },
+        async getData() {
+            try {
+                const response = await axios.get();
+            } catch (error) {}
         }
     }
 };
