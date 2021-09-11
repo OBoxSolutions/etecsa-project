@@ -1,6 +1,4 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/images/map-marker-alert.svg": "/images/map-marker-alert.svg",
-    "/images/map-marker.svg": "/images/map-marker.svg"
+    "/css/app.css": "/css/app.css"
 }
