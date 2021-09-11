@@ -1,4 +1,4 @@
-const map = L.map("map").setView([51.505, -0.09], 13);
+const map = L.map("map").setView([22.40694, -79.96472], 13);
 
 const greenIcon = L.icon({
     iconUrl: "images/map-marker.svg",
@@ -21,8 +21,8 @@ const redIcon = L.icon({
     className: "alert-marker",
 });
 
-L.marker([51.5, -0.09], { icon: greenIcon }).addTo(map);
-L.marker([51.7, -0.09], { icon: redIcon }).addTo(map);
+L.marker([22.40694, -79.96472], { icon: greenIcon }).addTo(map);
+L.marker([22.406, -79.96472], { icon: redIcon }).addTo(map);
 
 L.tileLayer(
     "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
