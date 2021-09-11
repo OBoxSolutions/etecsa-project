@@ -33,7 +33,8 @@ import LeafletMap from "./LeafletMap.vue";
 export default {
     data() {
         return {
-            active: "map"
+            active: "map",
+            calls: []
         };
     },
     components: {
