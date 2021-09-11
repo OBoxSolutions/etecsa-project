@@ -1,1 +1,2 @@
-require('./bootstrap');
+require("./bootstrap");
+const leaflet = require("./leaflet");
