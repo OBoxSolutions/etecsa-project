@@ -1,5 +1,4 @@
 require("./bootstrap");
-const leaflet = require("./leaflet");
 
 /**
  * The following block of code imports vue components automatically
