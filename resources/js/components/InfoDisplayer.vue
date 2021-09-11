@@ -42,6 +42,7 @@ export default {
         LeafletMap
     },
     name: "InfoDisplayer",
+    mounted() {},
     methods: {
         activate(toActivate) {
             this.active = toActivate;
