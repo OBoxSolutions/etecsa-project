@@ -13,5 +13,8 @@
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "bootstrap": "^5.1.1"
     }
 }
