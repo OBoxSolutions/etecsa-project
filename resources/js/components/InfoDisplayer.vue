@@ -11,6 +11,7 @@
                 type="button"
                 class="btn btn-primary"
                 :class="{ active: active === 'map' }"
+                @click="activate('map')"
             >
                 Mapa
             </button>
@@ -18,6 +19,7 @@
                 type="button"
                 class="btn btn-primary"
                 :class="{ active: active === 'table' }"
+                @click="activate('table')"
             >
                 Tabla
             </button>
