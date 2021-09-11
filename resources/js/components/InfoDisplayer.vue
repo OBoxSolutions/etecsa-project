@@ -1,7 +1,7 @@
 <template>
     <div>
         <leaflet-map v-if="active === 'map'"></leaflet-map>
-        <base-table v-else></base-table>
+        <base-table v-else class="base-table"></base-table>
         <div
             class="btn-group position-fixed top-0 end-0 mt-3 ml-3"
             role="group"
@@ -52,6 +52,10 @@ export default {
 .btn-group {
     z-index: 1000;
     margin-right: 3em;
+}
+
+.base-table {
+    margin-top: 5em;
 }
 
 .active {
