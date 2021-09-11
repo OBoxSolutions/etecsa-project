@@ -21,13 +21,7 @@ const redIcon = L.icon({
     className: "alert-marker",
 });
 
-const greenMarker = L.marker([51.5, -0.09], { icon: greenIcon }).addTo(mymap);
-
-setTimeout(() => {
-    mymap.removeLayer(greenMarker);
-    L.marker([51.5, -0.09], { icon: redIcon }).addTo(mymap);
-}, 3000);
-
+L.marker([51.5, -0.09], { icon: greenIcon }).addTo(mymap);
 L.marker([51.7, -0.09], { icon: redIcon }).addTo(mymap);
 
 L.tileLayer(
