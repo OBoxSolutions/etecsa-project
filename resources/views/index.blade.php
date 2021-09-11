@@ -24,7 +24,7 @@
 
 <body class="antialiased">
     <div id="app">
-        <leaflet-map></leaflet-map>
+        <info-displayer></info-displayer>
     </div>
 </body>
 
