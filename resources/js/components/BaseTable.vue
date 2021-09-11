@@ -89,7 +89,7 @@ export default {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04aa6d;
+    background-color: var(--primary-color);
     color: white;
 }
 </style>
