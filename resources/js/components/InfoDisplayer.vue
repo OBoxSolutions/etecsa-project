@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import LeafletMap from "./LeafletMap.vue";
 
 export default {
