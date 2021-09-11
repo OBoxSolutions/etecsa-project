@@ -8,6 +8,7 @@ window.axios = require("axios");
 
 window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
+require("@popperjs/core");
 require("bootstrap");
 require("leaflet");
 
