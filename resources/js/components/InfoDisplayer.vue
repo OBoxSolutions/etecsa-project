@@ -44,7 +44,7 @@ export default {
     name: "InfoDisplayer",
     mounted() {
         this.getData();
-        setInterval(this.getData, 1800000);
+        setInterval(this.getData, process.env.MIX_TIME_INTERVAL || 1800000);
     },
     methods: {
         activate(toActivate) {
