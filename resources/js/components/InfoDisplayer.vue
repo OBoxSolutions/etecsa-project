@@ -44,6 +44,7 @@ export default {
     name: "InfoDisplayer",
     mounted() {
         this.getData();
+        setInterval(this.getData, 1800000);
     },
     methods: {
         activate(toActivate) {
