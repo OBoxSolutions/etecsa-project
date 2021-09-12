@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\TestTable;
+use Faker\Core\Number;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -22,10 +23,11 @@ class TestTableFactory extends Factory
      */
     public function definition()
     {
+        $indicator = ['ldne', 'ldie'];
         return [
-            'municipio' => Str::random(10),
-            'centro' => Str::random(10),
-            'indicador' => Str::random(10),
+            'municipality' => Str::random(10),
+            'center' => Str::random(10),
+            'indicator' => $indicator[rand(0, 1)],
             'ner' => 97, // password
         ];
     }
