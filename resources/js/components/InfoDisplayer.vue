@@ -1,7 +1,7 @@
 <template>
     <div>
-        <leaflet-map v-if="active === 'map'"></leaflet-map>
-        <base-table v-else class="base-table"></base-table>
+        <leaflet-map v-if="active === 'map'" :calls="calls"></leaflet-map>
+        <base-table v-else class="base-table" :calls="calls"></base-table>
         <div
             class="btn-group position-fixed top-0 end-0 mt-3 ml-3"
             role="group"
