@@ -61,7 +61,13 @@
 
 <script>
 export default {
-    name: "BaseTable"
+    name: "BaseTable",
+    props: {
+        calls: {
+            type: Array,
+            default: () => []
+        }
+    }
 };
 </script>
 

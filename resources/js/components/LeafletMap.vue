@@ -5,6 +5,12 @@
 <script>
 export default {
     name: "LeafletMap",
+    props: {
+        calls: {
+            type: Array,
+            default: () => []
+        }
+    },
     mounted() {
         const map = L.map("map").setView([22.40694, -79.96472], 9);
 
