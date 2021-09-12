@@ -42,15 +42,20 @@ export default {
         LeafletMap
     },
     name: "InfoDisplayer",
-    mounted() {},
+    mounted() {
+        this.getData();
+    },
     methods: {
         activate(toActivate) {
             this.active = toActivate;
         },
         async getData() {
             try {
-                const response = await axios.get();
-            } catch (error) {}
+                const response = await axios.get("api/calls");
+                this.calls = response.data;
+            } catch (error) {
+                console.log(error);
+            }
         }
     }
 };
