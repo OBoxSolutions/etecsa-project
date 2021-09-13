@@ -84,6 +84,7 @@ export default {
                 const coordinate = this.coordinates.find(
                     coordinate => coordinate.center === call.center
                 );
+                if (!coordinate) return;
                 if (isInDanger(call.indicator, call.ner)) {
                     L.marker(coordinate.coordinate, {
                         icon: this.redIcon
