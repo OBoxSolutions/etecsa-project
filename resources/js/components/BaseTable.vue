@@ -6,7 +6,11 @@
             <th>Indicador</th>
             <th>NER</th>
         </tr>
-        <tr v-for="(call, index) in calls" :key="call + index">
+        <tr
+            v-for="(call, index) in calls"
+            :key="call + index"
+            :class="{ danger: isInDanger(call.indicator, call.ner) }"
+        >
             <td>{{ call.municipality }}</td>
             <td>{{ call.center }}</td>
             <td>{{ call.indicator }}</td>
