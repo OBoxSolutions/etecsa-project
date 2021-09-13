@@ -87,15 +87,17 @@ export default {
                     coordinate => coordinate.center === call.center
                 );
                 if (!coordinate) return;
+                let marker;
                 if (isInDanger(call.indicator, call.ner)) {
-                    L.marker(coordinate.coordinate, {
+                    marker = L.marker(coordinate.coordinate, {
                         icon: this.redIcon
                     }).addTo(this.map);
                 } else {
-                    L.marker(coordinate.coordinate, {
+                    marker = L.marker(coordinate.coordinate, {
                         icon: this.greenIcon
                     }).addTo(this.map);
                 }
+                this.markers.push(marker);
             });
         },
         isCoordinate(coordinateToCheck) {
