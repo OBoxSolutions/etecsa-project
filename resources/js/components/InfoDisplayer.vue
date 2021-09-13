@@ -1,7 +1,7 @@
 <template>
     <div>
-        <leaflet-map v-if="active === 'map'" :calls="calls"></leaflet-map>
-        <div class="base-table_wrapper" v-else>
+        <leaflet-map v-show="active === 'map'" :calls="calls"></leaflet-map>
+        <div class="base-table_wrapper" v-show="active === 'table'">
             <base-table class="base-table" :calls="calls"></base-table>
         </div>
         <div
