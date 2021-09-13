@@ -7,6 +7,11 @@ import coordinates from "./coordinates";
 
 export default {
     name: "LeafletMap",
+    data() {
+        return {
+            map: null
+        };
+    },
     props: {
         calls: {
             type: Array,
