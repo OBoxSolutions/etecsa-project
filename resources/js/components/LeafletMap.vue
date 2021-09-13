@@ -13,7 +13,8 @@ export default {
             map: null,
             greenIcon: null,
             redIcon: null,
-            coordinates: []
+            coordinates: [],
+            markers: []
         };
     },
     props: {
