@@ -71,7 +71,7 @@ export default {
                     return {
                         center: coordinate.Centro,
                         key: coordinate.Clave,
-                        coordinate: coordinate.Coordenadas
+                        coordinate: coordinate.Coordenadas.split(",")
                     };
                 })
                 .filter(coordinate => coordinate);
