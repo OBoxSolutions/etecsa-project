@@ -78,6 +78,22 @@ export default {
         }
     },
     methods: {
+        makeMarkers() {
+            this.calls.forEach(call => {
+                const coordinate = this.coordinates.find(
+                    coordinate => coordinate.center === call.center
+                );
+                if (this.isInDanger(call.indicator, call.ner)) {
+                    L.marker(coordinate.coordinate, {
+                        icon: this.redIcon
+                    }).addTo(this.map);
+                } else {
+                    L.marker(coordinate.coordinate, {
+                        icon: this.greenIcon
+                    }).addTo(this.map);
+                }
+            });
+        },
         isCoordinate(coordinateToCheck) {
             const regex = /[0-9]+.[0-9]+, -?[0-9]+.[0-9]+/;
             return regex.test(coordinateToCheck);
