@@ -23,11 +23,12 @@ class TestTableFactory extends Factory
      */
     public function definition()
     {
-        $indicator = ['ldne', 'ldie'];
+        $indicators = ['ldne', 'ldie'];
+        $centers = ['Caibarién', 'Cayo Santa María', 'Lagunas del Este', 'Dolores'];
         return [
             'municipality' => Str::random(10),
-            'center' => Str::random(10),
-            'indicator' => $indicator[rand(0, 1)],
+            'center' => $centers[rand(0, 3)],
+            'indicator' => $indicators[rand(0, 1)],
             'ner' => rand(80, 100), // password
         ];
     }
