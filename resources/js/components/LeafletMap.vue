@@ -97,7 +97,7 @@ export default {
             });
         },
         isCoordinate(coordinateToCheck) {
-            const regex = /[0-9]+.[0-9]+, -?[0-9]+.[0-9]+/;
+            const regex = /[0-9]+.[0-9]+,-?[0-9]+.[0-9]+/;
             return regex.test(coordinateToCheck);
         }
     }
