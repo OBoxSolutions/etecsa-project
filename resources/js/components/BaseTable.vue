@@ -55,10 +55,6 @@ export default {
     padding: 8px;
 }
 
-.base-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
 .base-table tr:hover {
     background-color: #ddd;
 }
