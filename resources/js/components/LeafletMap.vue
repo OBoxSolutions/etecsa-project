@@ -4,6 +4,7 @@
 
 <script>
 import coordinates from "./coordinates";
+import isInDanger from "./utils/isInDanger";
 
 export default {
     name: "LeafletMap",
@@ -83,7 +84,7 @@ export default {
                 const coordinate = this.coordinates.find(
                     coordinate => coordinate.center === call.center
                 );
-                if (this.isInDanger(call.indicator, call.ner)) {
+                if (isInDanger(call.indicator, call.ner)) {
                     L.marker(coordinate.coordinate, {
                         icon: this.redIcon
                     }).addTo(this.map);
@@ -97,15 +98,6 @@ export default {
         isCoordinate(coordinateToCheck) {
             const regex = /[0-9]+.[0-9]+, -?[0-9]+.[0-9]+/;
             return regex.test(coordinateToCheck);
-        },
-        isInDanger(indicator, ner) {
-            if (indicator === "ldne" && ner < 97.1) {
-                return true;
-            }
-            if (indicator === "ldie" && ner < 92) {
-                return true;
-            }
-            return false;
         }
     }
 };
