@@ -12,7 +12,8 @@ export default {
         return {
             map: null,
             greenIcon: null,
-            redIcon: null
+            redIcon: null,
+            coordinates: []
         };
     },
     props: {
@@ -45,10 +46,8 @@ export default {
             className: "alert-marker"
         });
 
-        L.marker([22.40694, -79.96472], { icon: this.greenIcon }).addTo(
-            this.map
-        );
-        L.marker([22.406, -79.96472], { icon: this.redIcon }).addTo(this.map);
+        this.formatCoordinates();
+        this.makeMarkers();
 
         L.tileLayer(
             "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -76,9 +75,7 @@ export default {
                     };
                 })
                 .filter(coordinate => coordinate);
-        }
-    },
-    methods: {
+        },
         makeMarkers() {
             this.calls.forEach(call => {
                 const coordinate = this.coordinates.find(
