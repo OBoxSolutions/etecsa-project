@@ -65,6 +65,7 @@ export default {
     },
     watch: {
         calls() {
+            this.removeMarkers();
             this.makeMarkers();
         }
     },
@@ -99,6 +100,12 @@ export default {
                 }
                 this.markers.push(marker);
             });
+        },
+        removeMarkers() {
+            for (let i = 0; i < this.markers.length; i++) {
+                this.map.removeLayer(this.markers[i]);
+                this.markers.splice(i, 1);
+            }
         },
         isCoordinate(coordinateToCheck) {
             const regex = /[0-9]+.[0-9]+,-?[0-9]+.[0-9]+/;
