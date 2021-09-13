@@ -28,7 +28,7 @@ class TestTableFactory extends Factory
             'municipality' => Str::random(10),
             'center' => Str::random(10),
             'indicator' => $indicator[rand(0, 1)],
-            'ner' => 97, // password
+            'ner' => rand(80, 100), // password
         ];
     }
 }
