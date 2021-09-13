@@ -64,9 +64,9 @@ export default {
             }
         ).addTo(this.map);
     },
-    computed: {
-        coordinates() {
-            return coordinates
+    methods: {
+        formatCoordinates() {
+            this.coordinates = coordinates
                 .map(coordinate => {
                     if (!this.isCoordinate(coordinate.Coordenadas)) return null;
                     return {
