@@ -4,7 +4,7 @@
             <th>Municipio</th>
             <th>Centro</th>
             <th>Indicador</th>
-            <th>NER</th>
+            <th>NER(%)</th>
         </tr>
         <tr
             v-for="(call, index) in calls"
