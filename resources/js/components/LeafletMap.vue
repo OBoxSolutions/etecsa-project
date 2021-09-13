@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import coordinates from "./coordinates";
+
 export default {
     name: "LeafletMap",
     props: {
