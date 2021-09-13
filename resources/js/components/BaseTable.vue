@@ -55,4 +55,14 @@ export default {
     background-color: var(--primary-color);
     color: white;
 }
+
+.danger {
+    background-color: var(--danger);
+    color: white;
+}
+
+.danger:hover {
+    background-color: var(--danger-darker) !important;
+    color: white !important;
+}
 </style>
