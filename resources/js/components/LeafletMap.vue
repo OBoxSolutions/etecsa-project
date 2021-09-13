@@ -81,6 +81,15 @@ export default {
         isCoordinate(coordinateToCheck) {
             const regex = /[0-9]+.[0-9]+, -?[0-9]+.[0-9]+/;
             return regex.test(coordinateToCheck);
+        },
+        isInDanger(indicator, ner) {
+            if (indicator === "ldne" && ner < 97.1) {
+                return true;
+            }
+            if (indicator === "ldie" && ner < 92) {
+                return true;
+            }
+            return false;
         }
     }
 };
