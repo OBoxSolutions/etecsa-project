@@ -62,6 +62,11 @@ export default {
             }
         ).addTo(this.map);
     },
+    watch: {
+        calls() {
+            this.makeMarkers();
+        }
+    },
     methods: {
         formatCoordinates() {
             this.coordinates = coordinates
