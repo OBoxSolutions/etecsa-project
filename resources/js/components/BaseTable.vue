@@ -7,9 +7,9 @@
             <th>NER</th>
         </tr>
         <tr v-for="(call, index) in calls" :key="call + index">
-            <td>{{ call.municipio }}</td>
-            <td>{{ call.centro }}</td>
-            <td>{{ call.indicador }}</td>
+            <td>{{ call.municipality }}</td>
+            <td>{{ call.center }}</td>
+            <td>{{ call.indicator }}</td>
             <td>{{ call.ner }}</td>
         </tr>
     </table>
