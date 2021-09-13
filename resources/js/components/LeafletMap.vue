@@ -57,7 +57,27 @@ export default {
                 accessToken:
                     "pk.eyJ1IjoidGF1cm9tYWNoaWFuIiwiYSI6ImNrdGQ2cTduOTBjb24yb3BwdmkwZXNpeWIifQ.dpvMWahJDqk3hwLs6IaqkQ"
             }
-        ).addTo(map);
+        ).addTo(this.map);
+    },
+    computed: {
+        coordinates() {
+            return coordinates
+                .map(coordinate => {
+                    if (!this.isCoordinate(coordinate.Coordenadas)) return null;
+                    return {
+                        center: coordinate.Centro,
+                        key: coordinate.Clave,
+                        coordinate: coordinate.Coordenadas
+                    };
+                })
+                .filter(coordinate => coordinate);
+        }
+    },
+    methods: {
+        isCoordinate(coordinateToCheck) {
+            const regex = /[0-9]+.[0-9]+, -?[0-9]+.[0-9]+/;
+            return regex.test(coordinateToCheck);
+        }
     }
 };
 </script>
