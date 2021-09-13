@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import isInDanger from "./utils/isInDanger";
+
 export default {
     name: "BaseTable",
     props: {
@@ -30,13 +32,7 @@ export default {
     },
     methods: {
         isInDanger(indicator, ner) {
-            if (indicator === "ldne" && ner < 97.1) {
-                return true;
-            }
-            if (indicator === "ldie" && ner < 92) {
-                return true;
-            }
-            return false;
+            return isInDanger(indicator, ner);
         }
     }
 };
