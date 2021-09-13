@@ -9,7 +9,9 @@ export default {
     name: "LeafletMap",
     data() {
         return {
-            map: null
+            map: null,
+            greenIcon: null,
+            redIcon: null
         };
     },
     props: {
@@ -21,7 +23,7 @@ export default {
     mounted() {
         this.map = L.map("map").setView([22.40694, -79.96472], 9);
 
-        const greenIcon = L.icon({
+        this.greenIcon = L.icon({
             iconUrl: "images/map-marker.svg",
 
             iconSize: [38, 95], // size of the icon
@@ -31,7 +33,7 @@ export default {
             popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
         });
 
-        const redIcon = L.icon({
+        this.redIcon = L.icon({
             iconUrl: "images/map-marker-alert.svg",
 
             iconSize: [48, 105], // size of the icon
@@ -42,8 +44,10 @@ export default {
             className: "alert-marker"
         });
 
-        L.marker([22.40694, -79.96472], { icon: greenIcon }).addTo(map);
-        L.marker([22.406, -79.96472], { icon: redIcon }).addTo(map);
+        L.marker([22.40694, -79.96472], { icon: this.greenIcon }).addTo(
+            this.map
+        );
+        L.marker([22.406, -79.96472], { icon: this.redIcon }).addTo(this.map);
 
         L.tileLayer(
             "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
