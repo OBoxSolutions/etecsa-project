@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\TestTable;
@@ -19,6 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('calls', function () {
-    return TestTable::factory()->count(5)->make();
-});
+// Route::get('calls', function () {
+//     return TestTable::factory()->count(5)->make();
+// });
+
+Route::get('calls', [IndexController::class, 'getData']);
