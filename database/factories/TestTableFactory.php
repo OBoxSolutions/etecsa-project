@@ -28,8 +28,8 @@ class TestTableFactory extends Factory
         return [
             'municipality' => Str::random(10),
             'center' => $centers[rand(0, 3)],
-            'indicator' => $indicators[rand(0, 1)],
-            'ner' => rand(80, 100), // password
+            'NerLDNE' => rand(80, 100),
+            'NerLDIE' => rand(80, 100), // password
         ];
     }
 }
