@@ -88,7 +88,7 @@ export default {
                 );
                 if (!coordinate) return;
                 let marker;
-                if (isInDanger(call.indicator, call.ner)) {
+                if (isInDanger('ldne', call.NerLDNE) || isInDanger('ldie', call.NerLDIE)) {
                     marker = L.marker(coordinate.coordinate, {
                         icon: this.redIcon
                     }).addTo(this.map);
