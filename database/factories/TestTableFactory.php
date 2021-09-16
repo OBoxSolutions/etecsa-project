@@ -26,8 +26,8 @@ class TestTableFactory extends Factory
         $indicators = ['ldne', 'ldie'];
         $centers = ['Caibarién', 'Cayo Santa María', 'Lagunas del Este', 'Dolores'];
         return [
-            'municipality' => Str::random(10),
-            'center' => $centers[rand(0, 3)],
+            'municipio' => Str::random(10),
+            'centro' => $centers[rand(0, 3)],
             'NerLDNE' => rand(80, 100),
             'NerLDIE' => rand(80, 100), // password
         ];

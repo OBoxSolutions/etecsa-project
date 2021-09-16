@@ -9,10 +9,14 @@
         <tr
             v-for="(call, index) in calls"
             :key="call + index"
-            :class="{ danger: (isInDanger('ldne', call.NerLDNE) || isInDanger('ldie', call.NerLDIE)) }"
+            :class="{
+                danger:
+                    isInDanger('ldne', call.NerLDNE) ||
+                    isInDanger('ldie', call.NerLDIE)
+            }"
         >
-            <td>{{ call.municipality }}</td>
-            <td>{{ call.center }}</td>
+            <td>{{ call.municipio }}</td>
+            <td>{{ call.centro }}</td>
             <td>{{ call.NerLDNE }}</td>
             <td>{{ call.NerLDIE }}</td>
         </tr>

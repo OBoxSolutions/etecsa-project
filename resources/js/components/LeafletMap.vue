@@ -84,7 +84,7 @@ export default {
         makeMarkers() {
             this.calls.forEach(call => {
                 const coordinate = this.coordinates.find(
-                    coordinate => coordinate.center === call.center
+                    coordinate => coordinate.center === call.centro
                 );
                 if (!coordinate) return;
                 let marker;
@@ -106,11 +106,11 @@ export default {
         },
         popupMaker(call) {
             let popup = "Centro: ";
-            call.center ? (popup += `<b>${call.center}</b>`) : "Santa Clara";
+            call.centro ? (popup += `<b>${call.centro}</b>`) : "Santa Clara";
             popup += "<br>";
             popup += "Municipio: ";
-            call.municipality
-                ? (popup += `<b>${call.municipality}</b>`)
+            call.municipio
+                ? (popup += `<b>${call.municipio}</b>`)
                 : "Villa Clara";
             popup += "<br>";
             call.NerLDNE
