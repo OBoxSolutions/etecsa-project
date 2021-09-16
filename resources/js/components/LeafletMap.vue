@@ -88,7 +88,10 @@ export default {
                 );
                 if (!coordinate) return;
                 let marker;
-                if (isInDanger('ldne', call.NerLDNE) || isInDanger('ldie', call.NerLDIE)) {
+                if (
+                    isInDanger("ldne", call.NerLDNE) ||
+                    isInDanger("ldie", call.NerLDIE)
+                ) {
                     marker = L.marker(coordinate.coordinate, {
                         icon: this.redIcon
                     }).addTo(this.map);
@@ -97,6 +100,7 @@ export default {
                         icon: this.greenIcon
                     }).addTo(this.map);
                 }
+                marker.bindPopup(call.center);
                 this.markers.push(marker);
             });
         },
