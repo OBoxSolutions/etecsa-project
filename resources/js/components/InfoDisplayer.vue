@@ -55,7 +55,7 @@ export default {
         async getData() {
             try {
                 const response = await axios.get("api/calls");
-                this.calls = response.data;
+                this.calls = response.data.data;
             } catch (error) {
                 console.log(error);
             }
