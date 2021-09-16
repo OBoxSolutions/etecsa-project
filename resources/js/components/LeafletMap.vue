@@ -100,9 +100,26 @@ export default {
                         icon: this.greenIcon
                     }).addTo(this.map);
                 }
-                marker.bindPopup(call.center);
+                marker.bindPopup(this.popupMaker(call));
                 this.markers.push(marker);
             });
+        },
+        popupMaker(call) {
+            let popup = "Centro: ";
+            call.center ? (popup += `<b>${call.center}</b>`) : "Santa Clara";
+            popup += "<br>";
+            popup += "Municipio: ";
+            call.municipality
+                ? (popup += `<b>${call.municipality}</b>`)
+                : "Villa Clara";
+            popup += "<br>";
+            call.NerLDNE
+                ? (popup += `ner LDNE: <b>${call.NerLDNE}</b><br>`)
+                : "";
+            call.NerLDIE
+                ? (popup += `ner LDIE: <b>${call.NerLDIE}</b><br>`)
+                : "";
+            return popup;
         },
         removeMarkers() {
             for (let i = 0; i < this.markers.length; i++) {
