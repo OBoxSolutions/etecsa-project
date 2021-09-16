@@ -3,18 +3,18 @@
         <tr>
             <th>Municipio</th>
             <th>Centro</th>
-            <th>Indicador</th>
-            <th>NER(%)</th>
+            <th>NerLDNE(%)</th>
+            <th>NerLDIE(%)</th>
         </tr>
         <tr
             v-for="(call, index) in calls"
             :key="call + index"
-            :class="{ danger: isInDanger(call.indicator, call.ner) }"
+            :class="{ danger: (isInDanger('ldne', call.NerLDNE) || isInDanger('ldie', call.NerLDIE)) }"
         >
             <td>{{ call.municipality }}</td>
             <td>{{ call.center }}</td>
-            <td>{{ call.indicator }}</td>
-            <td>{{ call.ner }}</td>
+            <td>{{ call.NerLDNE }}</td>
+            <td>{{ call.NerLDIE }}</td>
         </tr>
     </table>
 </template>
