@@ -27,12 +27,12 @@ export default [
     {
         Centro: "San Agustín",
         Clave: "SAG",
-        Coordenadas: "Ubícalos en el Cayo StaMaria"
+        Coordenadas: "22.651704639523416,-78.97514549376722"
     },
     {
         Centro: "Salinas",
         Clave: "SL0",
-        Coordenadas: "Ubícalos en el Cayo StaMaria"
+        Coordenadas: "22.651704639523416,-78.96514549376722"
     },
     {
         Centro: "Hotel Dunas 6",
@@ -77,7 +77,7 @@ export default [
     {
         Centro: "Batalla de Santa Clara",
         Clave: "TL0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00972549562884"
     },
     {
         Centro: "Vueltas",
@@ -117,7 +117,7 @@ export default [
     {
         Centro: "Wilfredo Pages",
         Clave: "WPG",
-        Coordenadas: "Longitud:"
+        Coordenadas: "20.33887144704314,-77.12251480309382"
     },
     {
         Centro: "Unidad Proletaria",
@@ -127,12 +127,12 @@ export default [
     {
         Centro: "Gavilanes",
         Clave: "GB0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "21.977406453059448,-80.3129935450463:"
     },
     {
         Centro: "Lugardita",
         Clave: "LD0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.410830085095782,-79.97311897055542:"
     },
     {
         Centro: "Corralillo",
@@ -192,7 +192,7 @@ export default [
     {
         Centro: "Jutiero",
         Clave: "JRO",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00012549562884"
     },
     {
         Centro: "Manicaragua",
@@ -207,7 +207,7 @@ export default [
     {
         Centro: "Seibabo",
         Clave: "SI0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.37193632607976,-79.33589862927404"
     },
     {
         Centro: "Matagua",
@@ -217,7 +217,7 @@ export default [
     {
         Centro: "Guinia de Miranda",
         Clave: "UI0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00052549562884"
     },
     {
         Centro: "Jibacoa",
@@ -227,7 +227,7 @@ export default [
     {
         Centro: "Yaya",
         Clave: "YY0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.12140075189086,-79.94301339770236"
     },
     {
         Centro: "Moza",
@@ -242,7 +242,7 @@ export default [
     {
         Centro: "Herradura",
         Clave: "HDA",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.1631296724072,-79.96224204795172"
     },
     {
         Centro: "Baez",
@@ -267,7 +267,7 @@ export default [
     {
         Centro: "Carbo Servia",
         Clave: "CS0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00372549562884"
     },
     {
         Centro: "Hermanos Almejeiras",
@@ -282,17 +282,17 @@ export default [
     {
         Centro: "Jose Ramon Riquelme",
         Clave: "RL0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00172549562884"
     },
     {
         Centro: "Caguagua",
         Clave: "CG0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00272549562884"
     },
     {
         Centro: "CAI Carlos Caraballo",
         Clave: "CCA",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.37426124500465,-80.1496551182194"
     },
     {
         Centro: "Esperanza",
@@ -322,17 +322,17 @@ export default [
     {
         Centro: "Delicia",
         Clave: "DL0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.40148901659114,-79.96843650911877"
     },
     {
         Centro: "Brillante",
         Clave: "BR0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.58530939090384,-80.00672549562884"
     },
     {
         Centro: "Horqueta",
         Clave: "HOT",
-        Coordenadas: "Longitud:"
+        Coordenadas: "-23.34840072027843,-57.0586969613951"
     },
     {
         Centro: "General Carrillo",
@@ -387,7 +387,7 @@ export default [
     {
         Centro: "GI 26-Julio (Sagua la Grande)",
         Clave: "SAGI",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.80391201496304,-80.08014768645006"
     },
     {
         Centro: "Sitiecito",
@@ -407,12 +407,12 @@ export default [
     {
         Centro: "Zona Salud",
         Clave: "HV0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "-23.417307321129492,-57.01781548852802"
     },
     {
         Centro: "Usuario HUAWEI",
         Clave: "UMG",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.422851473144284,-79.95553543212579"
     },
     {
         Centro: "Santa Clara",
@@ -422,7 +422,7 @@ export default [
     {
         Centro: "ZH Contac Center",
         Clave: "ZHCC",
-        Coordenadas: "Longitud:"
+        Coordenadas: "-25.278010031112427,-57.56660006571569"
     },
     {
         Centro: "ZH Hospital Cardio Centro",
@@ -452,17 +452,17 @@ export default [
     {
         Centro: "GI Condado 1",
         Clave: "CONDA1",
-        Coordenadas: "Longitud:"
+        Coordenadas: "-25.27825256867721,-57.56652496386041"
     },
     {
         Centro: "GI Condado 2",
         Clave: "CONDA2",
-        Coordenadas: "Longitud:"
+        Coordenadas: "-25.27825256867721,-57.56752496386041"
     },
     {
         Centro: "GI Condado 3",
         Clave: "CONDA3",
-        Coordenadas: "Longitud:"
+        Coordenadas: "-25.27825256867721,-57.56852496386041"
     },
     {
         Centro: "La Panchita",
@@ -472,7 +472,7 @@ export default [
     {
         Centro: "Mariana Grajales",
         Clave: "MRN0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.715492852345815,-80.03679619159088"
     },
     {
         Centro: "Jose Marti",
@@ -487,12 +487,12 @@ export default [
     {
         Centro: "Julian Grimau (Yabu)",
         Clave: "JGM",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.457647891879414,-80.0906893993888"
     },
     {
         Centro: "Gomera",
         Clave: "GM0",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.285102638300792,-79.8873282705003"
     },
     {
         Centro: "Anton Diaz",
@@ -502,7 +502,7 @@ export default [
     {
         Centro: "Las Minas",
         Clave: "MAS",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.60943336997613,-80.06278434097192"
     },
     {
         Centro: "Minerva",
@@ -562,11 +562,11 @@ export default [
     {
         Centro: "WLL Cienfuegos",
         Clave: "TCCF",
-        Coordenadas: "Longitud:"
+        Coordenadas: "22.117077507668935,-80.18690203165804"
     },
     {
         Centro: "WLL Sancti Spíritus",
         Clave: "TCSS",
-        Coordenadas: "Longitud:"
+        Coordenadas: "21.947524795716426,-79.68389875887742"
     }
 ];
