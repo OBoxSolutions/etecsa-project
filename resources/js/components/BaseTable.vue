@@ -3,8 +3,8 @@
         <tr>
             <th>Municipio</th>
             <th>Centro</th>
-            <th>NerLDNE(%)</th>
-            <th>NerLDIE(%)</th>
+            <th>NER LDNE(%)</th>
+            <th>NER LDIE(%)</th>
         </tr>
         <tr
             v-for="(call, index) in calls"

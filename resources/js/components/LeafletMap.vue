@@ -114,10 +114,10 @@ export default {
                 : "Villa Clara";
             popup += "<br>";
             call.NerLDNE
-                ? (popup += `ner LDNE: <b>${call.NerLDNE}</b><br>`)
+                ? (popup += `NER LDNE: <b>${call.NerLDNE}</b><br>`)
                 : "";
             call.NerLDIE
-                ? (popup += `ner LDIE: <b>${call.NerLDIE}</b><br>`)
+                ? (popup += `NER LDIE: <b>${call.NerLDIE}</b><br>`)
                 : "";
             return popup;
         },
