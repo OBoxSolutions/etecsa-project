@@ -4,6 +4,12 @@
         <div class="base-table_wrapper" v-show="active === 'table'">
             <base-table class="base-table" :calls="calls"></base-table>
         </div>
+
+        <div
+            class="spinner-border position-fixed spinner text-primary"
+            role="status"
+        ></div>
+
         <div
             class="btn-group position-fixed top-0 end-0 mt-3 ml-3"
             role="group"
@@ -68,6 +74,20 @@ export default {
 .btn-group {
     z-index: 1000;
     margin-right: 3em;
+}
+
+.spinner {
+    z-index: 1000;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    width: 96px;
+    height: 96px;
+    border: 0.5em solid currentColor;
+    border-right-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
