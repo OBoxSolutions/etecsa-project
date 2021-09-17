@@ -127,12 +127,12 @@ export default [
     {
         Centro: "Gavilanes",
         Clave: "GB0",
-        Coordenadas: "21.977406453059448,-80.3129935450463:"
+        Coordenadas: "21.977406453059448,-80.3129935450463"
     },
     {
         Centro: "Lugardita",
         Clave: "LD0",
-        Coordenadas: "22.410830085095782,-79.97311897055542:"
+        Coordenadas: "22.410830085095782,-79.97311897055542"
     },
     {
         Centro: "Corralillo",
