@@ -626,6 +626,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 
 @charset "UTF-8";
+:root {
+  --primary-color: #3490dc;
+  --danger: #e3342f;
+  --danger-darker: #a12723;
+}
+
 /*!
  * Bootstrap v5.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
