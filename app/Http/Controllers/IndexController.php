@@ -102,14 +102,14 @@ class IndexController extends Controller
             // var_dump($totalLDIE);
             if ($totalLDNE != 0) {
                 $NerLDNE = ($okLDNE * 100) / $totalLDNE;
-                $data->NerLDNE = $NerLDNE;
+                $data->NerLDNE = round($NerLDNE, 2);
             }
             else{
                 $data->NerLDNE = 0;
             }
             if ($totalLDIE != 0) {
                 $NerLDIE = ($okLDIE * 100) / $totalLDIE;
-                $data->NerLDIE = $NerLDIE;
+                $data->NerLDIE = round($NerLDIE, 2);
             }
             else{
                 $data->NerLDIE = 0;
