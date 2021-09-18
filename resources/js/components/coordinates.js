@@ -107,7 +107,7 @@ export default [
     {
         Centro: "Cifuentes",
         Clave: "IF0",
-        Coordenadas: "22.649050240090798,-80.04854542850065"
+        Coordenadas: "22.584287625915618,-80.02126779035756"
     },
     {
         Centro: "Mata",
