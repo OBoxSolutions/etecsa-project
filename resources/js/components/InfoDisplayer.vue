@@ -6,6 +6,7 @@
         </div>
 
         <div
+            v-if="loading"
             class="spinner-border position-fixed spinner text-primary"
             role="status"
         ></div>
@@ -43,7 +44,9 @@ export default {
     data() {
         return {
             active: "map",
-            calls: []
+            calls: [],
+            loading: false,
+            firstLoad: true
         };
     },
     components: {
@@ -60,11 +63,16 @@ export default {
         },
         async getData() {
             try {
+                if (this.firstLoad) {
+                    this.loading = true;
+                    this.firsLoad = false;
+                }
                 const response = await axios.get("api/calls");
                 this.calls = response.data.data;
             } catch (error) {
                 console.log(error);
             }
+            this.loading = false;
         }
     }
 };
