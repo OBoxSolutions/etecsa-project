@@ -5727,7 +5727,7 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   Centro: "Wilfredo Pages",
   Clave: "WPG",
-  Coordenadas: "22.626884327604813,-79.9328329250355"
+  Coordenadas: "22.626854327604813,-79.9328329250355"
 }, {
   Centro: "Unidad Proletaria",
   Clave: "UP0",

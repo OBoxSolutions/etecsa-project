@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use stdClass;
+use Carbon\Carbon;
+
 
 class IndexController extends Controller
 {
     public function getData()
     {
         $allData = [];
+        $date = Carbon::now()->format('y-n-j');
+
 
         $hw_query = DB::table('dbo.hw_data AS data')
             ->join('dbo.claves AS claves', 'claves.clave', '=', 'data.dest')
@@ -21,6 +25,7 @@ class IndexController extends Controller
             ->groupBy('claves.descr', 'municipios.mcpio', 'data.dest', 'data.indic', 'causas.ClaseNER')
             ->havingRaw("(causas.ClaseNER LIKE 'USR' OR causas.ClaseNER LIKE 'OK') AND
                         (data.indic LIKE 'LDNE' OR data.indic LIKE 'LDIE')")
+            ->where("data.fecha", "=", $date)
             ->get();
 
         $hw_query2 = $hw_query;
@@ -37,7 +42,7 @@ class IndexController extends Controller
 
 
         // return response()->json([
-        //     "data" => $alc_query
+        //     "data" => $hw_query
         // ]);
 
         foreach ($hw_query as $hw_q) {
@@ -114,10 +119,6 @@ class IndexController extends Controller
             else{
                 $data->NerLDIE = 0;
             }
-
-            // $NerLDIE = ($okLDIE * 100) / $totalLDIE;
-
-            // $data->NerLDIE = $NerLDIE;
 
             $allData[] = $data;
         }
