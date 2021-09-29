@@ -38,6 +38,7 @@ class IndexController extends Controller
             ->groupBy('claves.descr', 'data.dest', 'data.indic', 'causas.ClaseNER')
             ->havingRaw("(causas.ClaseNER LIKE 'USR' OR causas.ClaseNER LIKE 'OK') AND
                         (data.indic LIKE 'LDNE' OR data.indic LIKE 'LDIE')")
+            ->where("data.fecha", "=", $date)
             ->get();
 
 
