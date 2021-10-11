@@ -5284,20 +5284,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _LeafletMap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LeafletMap.vue */ "./resources/js/components/LeafletMap.vue");
-<<<<<<< HEAD
-=======
-/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-<<<<<<< HEAD
-//
-=======
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
 //
 //
 //
@@ -5328,17 +5320,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       active: "map",
-      calls: []
+      calls: [],
+      loading: false,
+      firstLoad: true
     };
   },
   components: {
@@ -5347,11 +5345,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: "InfoDisplayer",
   mounted: function mounted() {
     this.getData();
-<<<<<<< HEAD
     setInterval(this.getData, "1800000" || 0);
-=======
-    setInterval(this.getData, process.env.MIX_TIME_INTERVAL || 1800000);
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
   },
   methods: {
     activate: function activate(toActivate) {
@@ -5367,26 +5361,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.prev = 0;
-                _context.next = 3;
+
+                if (_this.firstLoad) {
+                  _this.loading = true;
+                  _this.firsLoad = false;
+                }
+
+                _context.next = 4;
                 return axios__WEBPACK_IMPORTED_MODULE_1___default().get("api/calls");
 
-              case 3:
+              case 4:
                 response = _context.sent;
                 _this.calls = response.data.data;
-                _context.next = 10;
+                _context.next = 11;
                 break;
 
-              case 7:
-                _context.prev = 7;
+              case 8:
+                _context.prev = 8;
                 _context.t0 = _context["catch"](0);
                 console.log(_context.t0);
 
-              case 10:
+              case 11:
+                _this.loading = false;
+
+              case 12:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[0, 7]]);
+        }, _callee, null, [[0, 8]]);
       }))();
     }
   }
@@ -5407,10 +5410,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _coordinates__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./coordinates */ "./resources/js/components/coordinates.js");
 /* harmony import */ var _utils_isInDanger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/isInDanger */ "./resources/js/components/utils/isInDanger.js");
-<<<<<<< HEAD
-=======
-/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
 //
 //
 //
@@ -5472,11 +5471,7 @@ __webpack_require__.r(__webpack_exports__);
       id: "mapbox/streets-v11",
       tileSize: 512,
       zoomOffset: -1,
-<<<<<<< HEAD
       accessToken: "pk.eyJ1IjoidGF1cm9tYWNoaWFuIiwiYSI6ImNrdGQ2cTduOTBjb24yb3BwdmkwZXNpeWIifQ.dpvMWahJDqk3hwLs6IaqkQ"
-=======
-      accessToken: process.env.MIX_MAPBOX_TOKEN
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
     }).addTo(this.map);
   },
   watch: {
@@ -5505,11 +5500,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.calls.forEach(function (call) {
         var coordinate = _this2.coordinates.find(function (coordinate) {
-<<<<<<< HEAD
           return coordinate.key === call.centro;
-=======
-          return coordinate.center === call.centro;
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
         });
 
         if (!coordinate) return;
@@ -5532,17 +5523,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     popupMaker: function popupMaker(call) {
       var popup = "Centro: ";
-<<<<<<< HEAD
       call.nombre ? popup += "<b>".concat(call.nombre, "</b>") : "Santa Clara";
-=======
-      call.centro ? popup += "<b>".concat(call.centro, "</b>") : "Santa Clara";
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
       popup += "<br>";
       popup += "Municipio: ";
       call.municipio ? popup += "<b>".concat(call.municipio, "</b>") : "Villa Clara";
       popup += "<br>";
-      call.NerLDNE ? popup += "ner LDNE: <b>".concat(call.NerLDNE, "</b><br>") : "";
-      call.NerLDIE ? popup += "ner LDIE: <b>".concat(call.NerLDIE, "</b><br>") : "";
+      call.NerLDNE ? popup += "NER LDNE: <b>".concat(call.NerLDNE, "</b><br>") : "";
+      call.NerLDIE ? popup += "NER LDIE: <b>".concat(call.NerLDIE, "</b><br>") : "";
       return popup;
     },
     removeMarkers: function removeMarkers() {
@@ -5732,7 +5719,7 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   Centro: "Cifuentes",
   Clave: "IF0",
-  Coordenadas: "22.649050240090798,-80.04854542850065"
+  Coordenadas: "22.584287625915618,-80.02126779035756"
 }, {
   Centro: "Mata",
   Clave: "MAT",
@@ -5740,7 +5727,7 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   Centro: "Wilfredo Pages",
   Clave: "WPG",
-  Coordenadas: "20.33887144704314,-77.12251480309382"
+  Coordenadas: "22.626854327604813,-79.9328329250355"
 }, {
   Centro: "Unidad Proletaria",
   Clave: "UP0",
@@ -5748,19 +5735,11 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   Centro: "Gavilanes",
   Clave: "GB0",
-<<<<<<< HEAD
   Coordenadas: "21.977406453059448,-80.3129935450463"
 }, {
   Centro: "Lugardita",
   Clave: "LD0",
   Coordenadas: "22.410830085095782,-79.97311897055542"
-=======
-  Coordenadas: "21.977406453059448,-80.3129935450463:"
-}, {
-  Centro: "Lugardita",
-  Clave: "LD0",
-  Coordenadas: "22.410830085095782,-79.97311897055542:"
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
 }, {
   Centro: "Corralillo",
   Clave: "LL0",
@@ -11182,7 +11161,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".btn-group[data-v-dc2541f4] {\n  z-index: 1000;\n  margin-right: 3em;\n}\n@media screen and (min-width: 768px) {\n.base-table_wrapper[data-v-dc2541f4] {\n    margin: 3em;\n}\n}\n.base-table[data-v-dc2541f4] {\n  margin-top: 5em;\n}\n.active[data-v-dc2541f4] {\n  background-color: #1b4c75;\n  color: white;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".btn-group[data-v-dc2541f4] {\n  z-index: 1000;\n  margin-right: 3em;\n}\n.spinner[data-v-dc2541f4] {\n  z-index: 1000;\n  margin: auto;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  text-align: center;\n  width: 96px;\n  height: 96px;\n  border: 0.5em solid currentColor;\n  border-right-color: transparent;\n}\n@media screen and (min-width: 768px) {\n.base-table_wrapper[data-v-dc2541f4] {\n    margin: 3em;\n}\n}\n.base-table[data-v-dc2541f4] {\n  margin-top: 5em;\n}\n.active[data-v-dc2541f4] {\n  background-color: #1b4c75;\n  color: white;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11206,11 +11185,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-<<<<<<< HEAD
-___CSS_LOADER_EXPORT___.push([module.id, "\n.base-table[data-v-aa56f9bc] {\n    font-family: Arial, Helvetica, sans-serif;\n    border-collapse: collapse;\n    width: 100%;\n}\n.base-table td[data-v-aa56f9bc],\n.base-table th[data-v-aa56f9bc] {\n    border: 1px solid #ddd;\n    padding: 8px;\n}\n.base-table tr[data-v-aa56f9bc]:hover {\n    background-color: #ddd;\n}\n.base-table th[data-v-aa56f9bc] {\n    padding-top: 12px;\n    padding-bottom: 12px;\n    text-align: left;\n    background-color: var(--primary-color);\n    color: white;\n}\n.danger[data-v-aa56f9bc] {\n    background-color: var(--danger);\n    color: white;\n}\n.danger[data-v-aa56f9bc]:hover {\n    background-color: var(--danger-darker) !important;\n    color: white !important;\n}\n", ""]);
-=======
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.base-table[data-v-aa56f9bc] {\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    border-collapse: collapse;\r\n    width: 100%;\n}\n.base-table td[data-v-aa56f9bc],\r\n.base-table th[data-v-aa56f9bc] {\r\n    border: 1px solid #ddd;\r\n    padding: 8px;\n}\n.base-table tr[data-v-aa56f9bc]:hover {\r\n    background-color: #ddd;\n}\n.base-table th[data-v-aa56f9bc] {\r\n    padding-top: 12px;\r\n    padding-bottom: 12px;\r\n    text-align: left;\r\n    background-color: var(--primary-color);\r\n    color: white;\n}\n.danger[data-v-aa56f9bc] {\r\n    background-color: var(--danger);\r\n    color: white;\n}\n.danger[data-v-aa56f9bc]:hover {\r\n    background-color: var(--danger-darker) !important;\r\n    color: white !important;\n}\r\n", ""]);
->>>>>>> 3b8d3f2c57d3ede8f737cfc6a9ac60580bb35439
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27047,9 +27022,9 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", [_vm._v("Centro")]),
       _vm._v(" "),
-      _c("th", [_vm._v("NerLDNE(%)")]),
+      _c("th", [_vm._v("NER LDNE(%)")]),
       _vm._v(" "),
-      _c("th", [_vm._v("NerLDIE(%)")])
+      _c("th", [_vm._v("NER LDIE(%)")])
     ])
   }
 ]
@@ -27111,6 +27086,13 @@ var render = function() {
         ],
         1
       ),
+      _vm._v(" "),
+      _vm.loading
+        ? _c("div", {
+            staticClass: "spinner-border position-fixed spinner text-primary",
+            attrs: { role: "status" }
+          })
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "div",
